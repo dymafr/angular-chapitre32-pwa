@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <a routerLink="/">
+    <img src="./assets/logo.png" alt="wonder" />
+  </a>
+  <ul *ngIf="isLoggedin !== null && !isLoggedin">
+    <li class="m-10">
+      <a routerLink="connexion">Connexion</a>
+    </li>
+    <li class="m-10">
+      <a routerLink="inscription">Inscription</a>
+    </li>
+  </ul>
+  <ul *ngIf="isLoggedin">
+    <li class="m-10">
+      <a routerLink="profil">Profil</a>
+    </li>
+    <li style="cursor: pointer" (click)="logout.emit(true)" class="m-10">
+      Déconnexion
+    </li>
+  </ul>
+</mat-toolbar>

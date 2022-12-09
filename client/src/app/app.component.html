@@ -1,0 +1,10 @@
+<div class="container">
+  <app-header
+    (logout)="logout()"
+    [isLoggedin]="isLoggedin$ | async"
+  ></app-header>
+  <div class="p-20">
+    <h1>Bonjour final!</h1>
+    <router-outlet></router-outlet>
+  </div>
+</div>
